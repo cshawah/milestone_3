@@ -7,15 +7,14 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
-                      warnings = FALSE,
-                      include = FALSE)
+                      warnings = FALSE)
 
 library(tidyverse)
 library(readr)
 library(janitor)
 ```
 
-```{r data readin}
+```{r data readin, include = FALSE}
 
 school_directory <- read.csv("raw-data/Education_Directory.csv") %>% clean_names()
 district_enrollment <- read.csv("raw-data/District_Enrollment_2013-14.csv") %>% clean_names()
@@ -25,6 +24,22 @@ SAT_performance <- read_csv("raw-data/SAT_School_Participation_and_Performance_2
 chronic_absenteeism <- read_csv("raw-data/Chronic_Absenteeism_by_District_2012-13.csv") %>% clean_names()
 ```
 
-So far, I have obtained all of my data from the education section of [data.ct.gov](https://data.ct.gov/browse?category=Education).
+<br>
+
+So far, I have obtained all of my data from the education section of [data.ct.gov](https://data.ct.gov/browse?category=Education). The year with the most up-to-date and expansive data is 2013.
+
+The first dataset I plan to use contains a row for every school in the state of CT, and columns describing its school district, grades taught, organization type (public/private), and perhaps most importantly, the school's organization code. This universal code is present in the other datasets I plan to use, which will allow me to join data sets. This seems like a good data set to use as a "home base" because it is really just a directory of schools. 
+
+The second dataset provides enrollment by school district. 
+
+The other four datasets contain information on performance statistics for different schools/districts including graduation rates, chronic absenteeism rates, SAT performances and CMT performances.  
+
+<br>
+
+All I have done so far with this data is load it in, clean the column names, and poke around a little bit. With these datasets alone, I definitely want to see how the type of school (public, private, tech) affects outcomes like SAT scores.
+
+I also hope to find some additional datasets about the towns/districts that these schools are located in to see if there are correlations between factors like poverty rates, student/teacher ratios, budget of school district, etc., and outcomes for students in the state of CT. I believe that at least some of this information should be public and accessible, but I may need to do some extra formatting to make them compatible with my current datasets.
+
+
 
 
