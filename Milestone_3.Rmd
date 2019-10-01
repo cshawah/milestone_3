@@ -6,7 +6,25 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warnings = FALSE,
+                      include = FALSE)
+
+library(tidyverse)
+library(readr)
+library(janitor)
 ```
+
+```{r data readin}
+
+school_directory <- read.csv("raw-data/Education_Directory.csv") %>% clean_names()
+district_enrollment <- read.csv("raw-data/District_Enrollment_2013-14.csv") %>% clean_names()
+graduation_rates <- read.csv("raw-data/School_Cohort_Graduation_Rates_2013.csv") %>% clean_names()
+CMT_performance <- read_csv("raw-data/CMT_School_Performance__2013.csv") %>% clean_names()
+SAT_performance <- read_csv("raw-data/SAT_School_Participation_and_Performance_2012-2013.csv") %>% clean_names()
+chronic_absenteeism <- read_csv("raw-data/Chronic_Absenteeism_by_District_2012-13.csv") %>% clean_names()
+```
+
+So far, I have obtained all of my data from the education section of [data.ct.gov](https://data.ct.gov/browse?category=Education).
 
 
