@@ -184,14 +184,21 @@ summary {
 </div>
 
 
-<p><br></p>
-<p>So far, I have obtained all of my data from the education section of <a href="https://data.ct.gov/browse?category=Education">data.ct.gov</a>. The year with the most up-to-date and expansive data is 2013.</p>
-<p>The first dataset I plan to use contains a row for every school in the state of CT, and columns describing its school district, grades taught, organization type (public/private), and perhaps most importantly, the school’s organization code. This universal code is present in the other datasets I plan to use, which will allow me to join data sets. This seems like a good data set to use as a “home base” because it is really just a directory of schools.</p>
-<p>The second dataset provides enrollment by school district.</p>
-<p>The other four datasets contain information on performance statistics for different schools/districts including graduation rates, chronic absenteeism rates, SAT performances and CMT performances.</p>
-<p><br></p>
-<p>All I have done so far with this data is load it in, clean the column names, and poke around a little bit. With these datasets alone, I definitely want to see how the type of school (public, private, tech) affects outcomes like SAT scores.</p>
+<div id="connecticut-education-analysis" class="section level2">
+<h2>Connecticut Education Analysis</h2>
+<div id="data" class="section level3">
+<h3>Data</h3>
+<p>So far, I have obtained all of my data from the education section of <a href="https://data.ct.gov/browse?category=Education">data.ct.gov</a>. The year with the most up-to-date and expansive data is 2013 (some sets are from 2012-2013 but some are for 2013-2014, so I will need to keep track of this.)</p>
+<p>The first dataset I plan to use contains a row for every school in the state of CT, and columns describing its school district, grades taught, organization type (public/private), and perhaps most importantly, the school’s organization code. This universal code is present in the other datasets I plan to use, which will allow me to join data sets. This seems like a good data set to use as a “home base” because it is really just a directory of schools. The second dataset provides enrollment by school district, which will allow me to standardize different measurements (perhaps number of teachers, school budget, etc.) by “per student” units. The other four datasets contain information on performance statistics for different schools/districts including graduation rates, chronic absenteeism rates, SAT performances and CMT performances.</p>
+</div>
+<div id="next-steps" class="section level3">
+<h3>Next Steps</h3>
+<p>So far I have loaded in this data, cleaned the column names, and poked around a little bit. These data sets seem to be fairly clean already, which is great news. With these datasets alone, I definitely want to see how the type of school (public, private, tech) affects outcomes like SAT scores.</p>
 <p>I also hope to find some additional datasets about the towns/districts that these schools are located in to see if there are correlations between factors like poverty rates, student/teacher ratios, budget of school district, etc., and outcomes for students in the state of CT. I believe that at least some of this information should be public and accessible, but I may need to do some extra formatting to make them compatible with my current datasets.</p>
+<p>When I met with Jack, we talked about mapping some of this data on to a map of the state, which would be very exciting! One thing I need to consider is that if I want to be able to plot individual schools, I will need to grab the latitude and longitudes using web scraping (we found a website that contained the coordinates), but if I am just plotting by town/country than I might be able to avoid this.</p>
+<p>So my first next step will be to look for data about other factors I would want to investigate, and begin planning a more focused approach of analyzing the CT Education system.</p>
+</div>
+</div>
 
 
 
